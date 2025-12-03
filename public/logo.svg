@@ -1,0 +1,43 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fondo circular -->
+  <circle cx="100" cy="100" r="95" fill="#0A1929" stroke="#1E90FF" stroke-width="3"/>
+  
+  <!-- Escudo de seguridad -->
+  <path d="M100 40 L140 55 L140 95 Q140 120 100 140 Q60 120 60 95 L60 55 Z" 
+        fill="none" 
+        stroke="#1E90FF" 
+        stroke-width="4" 
+        stroke-linejoin="round"/>
+  
+  <!-- Letra A estilizada dentro del escudo -->
+  <path d="M100 70 L115 105 L110 105 L107 97 L93 97 L90 105 L85 105 Z M95 92 L105 92 L100 78 Z" 
+        fill="#FFFFFF"/>
+  
+  <!-- Candado en el centro del escudo -->
+  <rect x="95" y="100" width="10" height="12" rx="1" fill="#1E90FF"/>
+  <path d="M92 100 L92 95 Q92 90 100 90 Q108 90 108 95 L108 100" 
+        fill="none" 
+        stroke="#1E90FF" 
+        stroke-width="2.5"/>
+  
+  <!-- Líneas de código/circuito decorativas -->
+  <line x1="70" y1="75" x2="55" y2="75" stroke="#1E90FF" stroke-width="2" opacity="0.6"/>
+  <circle cx="52" cy="75" r="2" fill="#1E90FF" opacity="0.6"/>
+  
+  <line x1="130" y1="75" x2="145" y2="75" stroke="#1E90FF" stroke-width="2" opacity="0.6"/>
+  <circle cx="148" cy="75" r="2" fill="#1E90FF" opacity="0.6"/>
+  
+  <line x1="70" y1="110" x2="55" y2="110" stroke="#1E90FF" stroke-width="2" opacity="0.6"/>
+  <circle cx="52" cy="110" r="2" fill="#1E90FF" opacity="0.6"/>
+  
+  <line x1="130" y1="110" x2="145" y2="110" stroke="#1E90FF" stroke-width="2" opacity="0.6"/>
+  <circle cx="148" cy="110" r="2" fill="#1E90FF" opacity="0.6"/>
+  
+  <!-- Texto AnderSec -->
+  <text x="100" y="170" 
+        font-family="'Montserrat', sans-serif" 
+        font-size="20" 
+        font-weight="700" 
+        fill="#FFFFFF" 
+        text-anchor="middle">AnderSec</text>
+</svg>
