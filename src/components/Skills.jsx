@@ -138,6 +138,49 @@ export default function Skills() {
           transition: width 1.3s ease;
           box-shadow: 0 0 15px rgba(0, 200, 255, .6);
         }
+        
+                /* --- Efecto REFLECTION + Glow Futurista --- */
+        .skill-card {
+          position: relative;
+          overflow: visible;
+        }
+
+        /* Cubo principal */
+        .skill-card {
+          animation: floatSkill 4s ease-in-out infinite;
+        }
+
+        /* Reflejo */
+        .skill-card::after {
+          content: "";
+          position: absolute;
+          bottom: -40px;
+          left: 50%;
+          transform: translateX(-50%) scaleY(-1);
+          width: 85%;
+          height: 100px;
+          background: inherit;
+          opacity: 0.18;
+          filter: blur(12px);
+          border-radius: 18px;
+          pointer-events: none;
+        }
+
+        /* Glow neon en hover */
+        .skill-card:hover {
+          box-shadow: 
+              0 0 25px rgba(0, 200, 255, 0.5),
+              0 0 60px rgba(0, 150, 255, 0.3),
+              inset 0 0 15px rgba(0, 200, 255, 0.3);
+          transform: translateY(-10px) scale(1.02);
+        }
+
+        /* Flotación suave */
+        @keyframes floatSkill {
+          0%, 100% { transform: translateY(0); }
+          50% { transform: translateY(-6px); }
+        }
+
       `}</style>
     </section>
   );
@@ -214,3 +257,5 @@ const styles = {
     borderRadius: "50px",
   },
 };
+
+// --- FIN DE ARCHIVO ---

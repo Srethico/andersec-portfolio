@@ -2,12 +2,14 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
 
+
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
   server: {
     allowedHosts: [
-      "smilies-atlantic-walks-kirk.trycloudflare.com"
+      "operates-schools-pursuant-conventions.trycloudflare.com"
+  
     ]
     }
 });

@@ -1,0 +1,105 @@
+/* === NAVBAR FUTURISTA – OPCIÓN B === */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(10, 10, 10, 0.7);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0, 150, 255, 0.15);
+  transition: 0.3s ease;
+  z-index: 9999;
+}
+
+.navbar.scrolled {
+  padding: 12px 40px;
+  background: rgba(5, 5, 5, 0.95);
+  border-bottom: 1px solid rgba(0, 150, 255, 0.35);
+}
+
+/* --- LOGO --- */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-img {
+  width: 45px;
+  height: 45px;
+  transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+  transform: rotate(5deg) scale(1.05);
+}
+
+.logo-text {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1e90ff;
+}
+
+/* --- MENU --- */
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 28px;
+  justify-content: center; /* Centra los elementos dentro del menú */
+  width: 100%;
+}
+
+.menu .nav-item {
+  position: relative;
+  color: #cfe8ff;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 500;
+  padding: 5px 2px;
+  transition: color 0.25s ease;
+}
+
+/* --- OPCIÓN B: Hover Glow Suave + Subrayado Neon --- */
+.menu .nav-item:hover {
+  color: #48afff;
+  text-shadow: 0 0 6px #48afff;
+}
+
+/* Línea futurista */
+.menu .nav-item::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #00eaff, #006aff);
+  border-radius: 10px;
+  transform: translateX(-50%);
+  transition: width 0.3s ease;
+}
+
+/* Animación del subrayado */
+.menu .nav-item:hover::after {
+  width: 100%;
+}
+
+/* Activo */
+.menu .nav-item.active {
+  color: #1e90ff;
+  text-shadow: 0 0 10px #1e90ff;
+}
+
+.menu .nav-item.active::after {
+  width: 100%;
+}
+
+
+

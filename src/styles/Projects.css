@@ -82,3 +82,37 @@
 .project-btn:hover {
   background: #1875cc;
 }
+
+
+
+
+
+.project-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  background-color: transparent; /* Fondo transparente */
+  border: 2px solid #ddd; /* Borde delgado y claro */
+  color: #ddd; /* Texto claro */
+  text-decoration: none;
+  border-radius: 10px; /* Bordes redondeados */
+  font-weight: 600;
+  transition: all 0.3s ease;
+  gap: 8px; /* Espacio entre el icono y el texto */
+}
+
+.project-btn:hover {
+  background-color: rgba(7, 223, 238, 0.411); /* Fondo al hacer hover */
+  border-color: #fff; /* Cambio de borde al hacer hover */
+  color: #fff; /* Color del texto al hacer hover */
+}
+
+.project-btn svg {
+  width: 18px; /* Ajusta el tamaño del icono */
+  height: 18px;
+  fill: currentColor; /* Asegura que el color del icono cambie con el texto */
+}
+.project-btn svg path {
+  stroke: currentColor; /* Asegura que el trazo del icono cambie con el texto */
+}

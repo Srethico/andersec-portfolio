@@ -10,7 +10,54 @@ html {
     scroll-behavior: smooth;
 }
 
+
+/* --- Estilo de WhatsApp --- */
+.whatsapp-float {
+  position: fixed;
+  bottom: 22px;
+  right: 22px;
+  background-color: #25D366;
+  color: #fff;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+  z-index: 1000;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.08);
+  box-shadow: 0 14px 30px rgba(0,0,0,0.45);
+}
+
+@keyframes whatsapp-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 18px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+.whatsapp-float {
+  animation: whatsapp-pulse 2.8s infinite;
+}
+
+
+
+
+
+
+
 body {
+  
     margin: 0;
     padding: 0;
     font-family: "inter", sans-serif;
@@ -528,6 +575,31 @@ section {
   transform: translateY(-3px);
   box-shadow: 0 0 10px #1e90ff;
 }
+.btn-github {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 18px;
+  background: #2b2b2b;
+  color: #ffffff;
+  border: 1px solid #3a3a3a;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.btn-github:hover {
+  background: #3a3a3a;
+  border-color: #5a5a5a;
+}
+
+.btn-icon {
+  display: flex;
+}
+
 
 /* Animación suave */
 @keyframes fadeIn {

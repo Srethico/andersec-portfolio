@@ -1,0 +1,13 @@
+.contact-success {
+  margin-top: 12px;
+  color: #00ffcc;
+  font-weight: 500;
+  text-align: center;
+}
+
+.contact-error {
+  margin-top: 12px;
+  color: #ff4d4d;
+  font-weight: 500;
+  text-align: center;
+}
