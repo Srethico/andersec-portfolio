@@ -606,3 +606,213 @@ section {
   from { opacity: 0; transform: translateY(20px); }
   to   { opacity: 1; transform: translateY(0); }
 }
+
+
+/* ========================================
+   MEDIA QUERIES RESPONSIVE
+   ======================================== */
+
+/* Tablets y pantallas medianas (hasta 768px) */
+@media (max-width: 768px) {
+  
+  /* Hero Section */
+  .home-title {
+    font-size: 36px;
+  }
+  
+  .home-subtitle {
+    font-size: 18px;
+  }
+  
+  .home-description {
+    font-size: 16px;
+  }
+  
+  .home-wrapper {
+    padding: 80px 15px;
+  }
+  
+  /* Footer Columns */
+  .footer-columns {
+    flex-direction: column;
+    padding: 30px 20px;
+    gap: 25px;
+  }
+  
+  .footer-section {
+    text-align: center;
+  }
+  
+  /* Contact Card */
+  .contact-wrapper {
+    padding: 50px 15px;
+  }
+  
+  .contact-card {
+    padding: 24px;
+  }
+  
+  .contact-title {
+    font-size: 24px;
+  }
+  
+  .contact-description {
+    font-size: 14px;
+  }
+  
+  /* Footer Links */
+  .footer-links {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  /* Secciones generales */
+  section {
+    padding: 40px 0;
+  }
+  
+  .container {
+    width: 95%;
+  }
+}
+
+/* Móviles pequeños (hasta 480px) */
+@media (max-width: 480px) {
+  
+  /* Hero más compacto */
+  .home-title {
+    font-size: 28px;
+    line-height: 1.2;
+  }
+  
+  .home-subtitle {
+    font-size: 16px;
+  }
+  
+  .home-description {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+  
+  .home-wrapper {
+    padding: 60px 12px;
+  }
+  
+  /* Botones más pequeños */
+  .home-btn {
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+  
+  .btn-github {
+    padding: 9px 16px;
+    font-size: 14px;
+  }
+  
+  /* WhatsApp flotante */
+  .whatsapp-float {
+    width: 50px;
+    height: 50px;
+    bottom: 18px;
+    right: 18px;
+  }
+  
+  /* Contact Form más compacto */
+  .contact-card {
+    padding: 20px;
+  }
+  
+  .contact-title {
+    font-size: 22px;
+  }
+  
+  .contact-input,
+  .contact-textarea {
+    padding: 11px;
+    font-size: 14px;
+  }
+  
+  .contact-btn {
+    padding: 11px;
+    font-size: 14px;
+  }
+  
+  /* Footer */
+  .footer {
+    padding: 35px 15px;
+  }
+  
+  .footer-logo {
+    width: 50px;
+  }
+  
+  .footer-socials a {
+    font-size: 22px;
+    margin: 0 8px;
+  }
+  
+  .footer-copy {
+    font-size: 12px;
+  }
+  
+  /* Formularios generales */
+  #contacto .titulo {
+    font-size: 2rem;
+  }
+  
+  #contacto .subtitulo {
+    font-size: 1rem;
+  }
+}
+
+/* Pantallas muy pequeñas (hasta 360px) */
+@media (max-width: 360px) {
+  
+  .home-title {
+    font-size: 24px;
+  }
+  
+  .home-subtitle {
+    font-size: 14px;
+  }
+  
+  .home-description {
+    font-size: 14px;
+  }
+  
+  .home-btn {
+    padding: 10px 20px;
+    font-size: 13px;
+  }
+  
+  .contact-title {
+    font-size: 20px;
+  }
+  
+  .whatsapp-float {
+    width: 46px;
+    height: 46px;
+    bottom: 15px;
+    right: 15px;
+  }
+}
+
+/* Pantallas grandes (más de 1200px) */
+@media (min-width: 1200px) {
+  
+  .home-title {
+    font-size: 56px;
+  }
+  
+  .home-subtitle {
+    font-size: 22px;
+  }
+  
+  .home-description {
+    font-size: 19px;
+  }
+  
+  .contact-card {
+    max-width: 500px;
+  }
+}

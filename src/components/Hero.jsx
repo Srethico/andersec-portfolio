@@ -16,7 +16,13 @@ export default function Hero() {
 
         <div style={styles.buttons}>
           <a href="#projects" style={styles.btnPrimary}>Ver Proyectos</a>
-          <a href="#contact" style={styles.btnOutline}>Descargar</a>
+          <a 
+            href="/CV-Anderson%20Ortiz%20Muñoz.pdf" 
+            download="CV-Anderson-Ortiz-Munoz.pdf"
+            style={styles.btnOutline}
+          >
+            Descargar CV
+          </a>
         </div>
 
       </div>

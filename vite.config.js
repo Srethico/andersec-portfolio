@@ -8,7 +8,7 @@ export default defineConfig({
   plugins: [react()],
   server: {
     allowedHosts: [
-      "operates-schools-pursuant-conventions.trycloudflare.com"
+      "dayton-adjust-mile-allied.trycloudflare.com"
   
     ]
     }

@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Anderson Ortiz Muñoz</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+        
+        .cv-container {
+            max-width: 850px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .name {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .title {
+            font-size: 20px;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            font-size: 14px;
+        }
+        
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        /* Main Content */
+        .content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 0;
+        }
+        
+        /* Sidebar */
+        .sidebar {
+            background: #f8f9fa;
+            padding: 30px;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #1e3c72;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #1e3c72;
+        }
+        
+        /* Skills */
+        .skill-item {
+            margin-bottom: 12px;
+        }
+        
+        .skill-name {
+            font-weight: 600;
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+        
+        .skill-bar {
+            background: #e0e0e0;
+            height: 8px;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        
+        .skill-level {
+            background: linear-gradient(90deg, #1e3c72, #2a5298);
+            height: 100%;
+            border-radius: 4px;
+        }
+        
+        /* Languages */
+        .language-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        
+        .language-name {
+            font-weight: 600;
+        }
+        
+        .language-level {
+            color: #666;
+        }
+        
+        /* Main Section */
+        .main-content {
+            padding: 30px;
+        }
+        
+        .profile-text {
+            line-height: 1.6;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        /* Experience */
+        .experience-item {
+            margin-bottom: 25px;
+        }
+        
+        .job-title {
+            font-size: 16px;
+            font-weight: bold;
+            color: #1e3c72;
+            margin-bottom: 5px;
+        }
+        
+        .company {
+            font-weight: 600;
+            color: #555;
+            margin-bottom: 5px;
+        }
+        
+        .date {
+            font-size: 13px;
+            color: #888;
+            margin-bottom: 10px;
+        }
+        
+        .description {
+            font-size: 14px;
+            line-height: 1.5;
+            color: #666;
+        }
+        
+        .description ul {
+            margin-left: 20px;
+            margin-top: 8px;
+        }
+        
+        .description li {
+            margin-bottom: 5px;
+        }
+        
+        /* Education */
+        .education-item {
+            margin-bottom: 20px;
+        }
+        
+        .degree {
+            font-size: 16px;
+            font-weight: bold;
+            color: #1e3c72;
+            margin-bottom: 5px;
+        }
+        
+        .school {
+            font-weight: 600;
+            color: #555;
+            margin-bottom: 5px;
+        }
+        
+        /* Certifications */
+        .cert-item {
+            margin-bottom: 12px;
+            padding-left: 15px;
+            position: relative;
+        }
+        
+        .cert-item::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #1e3c72;
+            font-size: 20px;
+        }
+        
+        .cert-name {
+            font-weight: 600;
+            font-size: 14px;
+        }
+        
+        .cert-org {
+            font-size: 13px;
+            color: #666;
+        }
+        
+        /* Print styles */
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .cv-container {
+                box-shadow: none;
+                max-width: 100%;
+            }
+        }
+        
+        /* Mobile responsive */
+        @media (max-width: 768px) {
+            .content {
+                grid-template-columns: 1fr;
+            }
+            
+            .header {
+                padding: 25px;
+            }
+            
+            .name {
+                font-size: 28px;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+        
+        .btn-download {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #1e3c72;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            z-index: 1000;
+        }
+        
+        .btn-download:hover {
+            background: #2a5298;
+        }
+        
+        @media print {
+            .btn-download {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="btn-download" onclick="window.print()">📥 Descargar PDF</button>
+    
+    <div class="cv-container">
+        <!-- Header -->
+        <div class="header">
+            <div class="name">Anderson Ortiz Muñoz</div>
+            <div class="title">Ingeniero de Sistemas | Especialista en Ciberseguridad & Desarrollo de Software</div>
+            <div class="contact-info">
+                <span>📧 anderson@andersec.com <br></span>
+                <span>📱 +57 3132791203 </span> 
+                <span>📍 Bogotá, Colombia</span>
+                <a href="https://andersec-portfolio.vercel.app" target="_blank">🌐 andersec.com</a>
+                <a href="https://linkedin.com/in/anderson-ortiz" target="_blank">💼 LinkedIn</a>
+                <a href="https://github.com/Srethico" target="_blank">💻 GitHub</a>
+            </div>
+        </div>
+        
+        <div class="content">
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <!-- Skills Técnicas -->
+                <div class="section">
+                    <div class="section-title">Habilidades Técnicas</div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-name">Python</div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-name">Penetration Testing</div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-name">React / JavaScript</div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-name">Linux / Kali</div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-name">Git / GitHub</div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 75%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-name">SQL / Databases</div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 70%"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Herramientas -->
+                <div class="section">
+                    <div class="section-title">Herramientas</div>
+                    <div class="description">
+                        • Burp Suite<br>
+                        • Metasploit<br>
+                        • Nmap<br>
+                        • Wireshark<br>
+                        • OWASP ZAP<br>
+                        • Docker<br>
+                        • VS Code<br>
+                        • Postman
+                    </div>
+                </div>
+                
+                <!-- Idiomas -->
+                <div class="section">
+                    <div class="section-title">Idiomas</div>
+                    <div class="language-item">
+                        <span class="language-name">Español</span>
+                        <span class="language-level">Nativo</span>
+                    </div>
+                    <div class="language-item">
+                        <span class="language-name">Inglés</span>
+                        <span class="language-level">Intermedio</span>
+                    </div>
+                </div>
+                
+                <!-- Certificaciones -->
+                <div class="section">
+                    <div class="section-title">Certificaciones</div>
+                    <div class="cert-item">
+                        <div class="cert-name">Ethical Hacking</div>
+                        <div class="cert-org">Udemy - 2024</div>
+                    </div>
+                    <div class="cert-item">
+                        <div class="cert-name">Web Development</div>
+                        <div class="cert-org">Platzi - 2023</div>
+                    </div>
+                    <div class="cert-item">
+                        <div class="cert-name">Python for Security</div>
+                        <div class="cert-org">Coursera - 2023</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Main Content -->
+            <div class="main-content">
+                <!-- Perfil -->
+                <div class="section">
+                    <div class="section-title">Perfil Profesional</div>
+                    <p class="profile-text">
+                        Ingeniero de Sistemas apasionado por la ciberseguridad y el desarrollo de software seguro. Especializado en análisis de vulnerabilidades, penetration testing y construcción de aplicaciones web modernas. 
+                    </p>
+                    <p class="profile-text">
+                        Experiencia en automatización con Python, desarrollo full-stack con React, y implementación de medidas de seguridad siguiendo las mejores prácticas de la industria. Comprometido con el aprendizaje continuo y la construcción de soluciones tecnológicas seguras y escalables.
+                    </p>
+                </div>
+                
+                <!-- Experiencia -->
+                <div class="section">
+                    <div class="section-title">Experiencia Profesional</div>
+                    
+                    <div class="experience-item">
+                        <div class="job-title">Ingeniero de Ciberseguridad y Desarrollo</div>
+                        <div class="company">Freelance / Proyectos Independientes</div>
+                        <div class="date">Enero 2023 - Presente</div>
+                        <div class="description">
+                            <ul>
+                                <li>Desarrollo de aplicaciones web seguras usando React, Python y mejores prácticas de seguridad</li>
+                                <li>Análisis de vulnerabilidades en aplicaciones web siguiendo OWASP Top 10</li>
+                                <li>Implementación de pruebas de penetración y auditorías de seguridad</li>
+                                <li>Automatización de procesos de seguridad con scripts Python</li>
+                                <li>Consultoría en ciberseguridad para pequeñas empresas</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="experience-item">
+                        <div class="job-title">Desarrollador Full Stack</div>
+                        <div class="company">Proyectos Personales - AnderSec</div>
+                        <div class="date">2023 - Presente</div>
+                        <div class="description">
+                            <ul>
+                                <li>Creación de portafolio profesional enfocado en ciberseguridad</li>
+                                <li>Desarrollo de proyectos open-source de seguridad informática</li>
+                                <li>Investigación y documentación de vulnerabilidades comunes</li>
+                                <li>Implementación de aplicaciones con arquitectura segura</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Educación -->
+                <div class="section">
+                    <div class="section-title">Educación</div>
+                    
+                    <div class="education-item">
+                        <div class="degree">Ingeniería de Sistemas</div>
+                        <div class="school">Corporación unificada Nacional de educación superior CUN</div>
+                        <div class="date">2020 - En curso</div>
+                        <div class="description">
+                            Especialización en Ciberseguridad, Desarrollo de Software y Redes de Computadores
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Proyectos Destacados -->
+                <div class="section">
+                    <div class="section-title">Proyectos Destacados</div>
+                    
+                    <div class="experience-item">
+                        <div class="job-title">AnderSec Portfolio</div>
+                        <div class="date">2024</div>
+                        <div class="description">
+                            Portfolio profesional desarrollado con React y Vite, enfocado en mostrar proyectos de ciberseguridad y desarrollo web. Implementa diseño responsive, optimización de rendimiento y mejores prácticas de seguridad.
+                            <br><strong>Stack:</strong> React, Vite, JavaScript, CSS3
+                        </div>
+                    </div>
+                    
+                    <div class="experience-item">
+                        <div class="job-title">Security Automation Tools</div>
+                        <div class="date">2023</div>
+                        <div class="description">
+                            Suite de herramientas de automatización en Python para análisis de vulnerabilidades y escaneo de seguridad en aplicaciones web.
+                            <br><strong>Stack:</strong> Python, Selenium, BeautifulSoup, Requests
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
