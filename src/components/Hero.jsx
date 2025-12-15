@@ -19,15 +19,14 @@ export default function Hero() {
             Ver Proyectos
           </a>
 
-          <a
-            href="/CV-Anderson-Ortiz-Muñoz.pdf"
-            download
-            target="_blank"
-            rel="noopener noreferrer"
-            style={styles.btnOutline}
-          >
-            Descargar CV
-          </a>
+         <a
+          href="/cv-andersec.html"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={styles.btnPrimary}
+        >
+          Descargar CV
+        </a>
         </div>
       </div>
     </section>
