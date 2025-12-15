@@ -5,7 +5,7 @@ import "../styles/Contact.css";
 export default function Contact() {
   const form = useRef();
 
-  const [status, setStatus] = useState(""); // 👈 nuevo
+  const [status, setStatus] = useState(""); 
 
   const sendEmail = (e) => {
     e.preventDefault();

@@ -5,7 +5,7 @@ export default function Hero() {
         <h1 style={styles.title}>Anderson Ortiz Muñoz</h1>
 
         <h2 style={styles.subtitle}>
-          Ingeniero de Sistemas | Ciberseguridad | Desarrollo de software
+          Ingeniero de Sistemas | Ciberseguridad | Desarrollo de Software
         </h2>
 
         <p style={styles.text}>
@@ -15,16 +15,20 @@ export default function Hero() {
         </p>
 
         <div style={styles.buttons}>
-          <a href="#projects" style={styles.btnPrimary}>Ver Proyectos</a>
-          <a 
-            href="/CV-Anderson%20Ortiz%20Muñoz.pdf" 
-            download="CV-Anderson-Ortiz-Munoz.pdf"
+          <a href="#projects" style={styles.btnPrimary}>
+            Ver Proyectos
+          </a>
+
+          <a
+            href="/CV-Anderson-Ortiz-Muñoz.pdf"
+            download
+            target="_blank"
+            rel="noopener noreferrer"
             style={styles.btnOutline}
           >
             Descargar CV
           </a>
         </div>
-
       </div>
     </section>
   );
@@ -32,12 +36,11 @@ export default function Hero() {
 
 const styles = {
   hero: {
-    minHeight: "calc(100vh - 80px)",  
+    minHeight: "calc(100vh - 80px)",
     display: "flex",
     justifyContent: "center",
     flexDirection: "column",
     alignItems: "center",
-    paddingTop: "0px",
     textAlign: "center",
   },
 
@@ -72,22 +75,26 @@ const styles = {
     display: "flex",
     gap: "20px",
     justifyContent: "center",
+    flexWrap: "wrap",
   },
 
   btnPrimary: {
-    padding: "12px 24px",
+    padding: "12px 26px",
     background: "#1E90FF",
     color: "#fff",
-    borderRadius: "5px",
+    borderRadius: "8px",
     textDecoration: "none",
+    fontWeight: "600",
+    transition: "0.3s",
   },
 
   btnOutline: {
-    padding: "12px 24px",
+    padding: "12px 26px",
     border: "1px solid #1E90FF",
-    borderRadius: "5px",
+    borderRadius: "8px",
     textDecoration: "none",
     color: "#fff",
-  }
+    fontWeight: "600",
+    transition: "0.3s",
+  },
 };
-
