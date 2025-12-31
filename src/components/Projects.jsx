@@ -16,6 +16,41 @@ export default function Projects() {
       tech: ["Kali Linux", "OWASP ZAP", "Burp Suite", "Nmap", "Metasploit"],
       link: "https://github.com/Srethico",
     },
+
+    
+
+    {
+      title: "Sistema de Facturación Electrónica (DIAN)",
+      type: "Backend · Facturación · Cumplimiento Normativo",
+      
+      description:
+        "Sistema backend de facturación electrónica conforme a la normativa DIAN (UBL 2.1), con generación de XML, firma electrónica, control de estados, persistencia de CUFE y generación de PDF representativo con QR.",
+      responsibilities: [
+        "Diseño de arquitectura backend por capas",
+        "Generación de XML UBL 2.1 conforme a DIAN",
+        "Cálculo y persistencia del CUFE",
+        "Firma electrónica XAdES-BES con certificado digital",
+        "Validación de XML contra esquemas XSD oficiales",
+        "Generación de PDF representativo con QR DIAN",
+        "Gestión de estados del ciclo de facturación",
+        "Persistencia transaccional y control de errores",
+      ],
+
+      tech: [
+      "Python",
+      "FastAPI",
+      "SQLAlchemy",
+      "PostgreSQL",
+      "Alembic",
+      "ReportLab",
+      "XML / UBL 2.1",
+      "XAdES-BES",
+      "Docker",
+    ],
+
+      github: "https://github.com/Srethico/FACTURACION_ELECTRONICA",
+    },
+
     {
       title: "AnderSec – Portafolio Profesional",
       type: "Frontend · Branding Técnico",

@@ -5,37 +5,52 @@ export default function Architecture() {
     {
       title: "Frameworks Backend",
       items: [
-        "Laravel (MVC, Eloquent, APIs REST)",
-        "FastAPI (arquitectura modular)",
-        "Express.js",
-        "Node.js",
+        "FastAPI (APIs REST de alto rendimiento)",
+        "SQLAlchemy (ORM, modelos transaccionales)",
+        "Pydantic (validación estricta de datos)",
+        "Alembic (migraciones controladas)",
+        "Python 3.12",
       ],
     },
     {
       title: "Frameworks Frontend",
       items: [
-        "React (SPA, component-driven)",
-        "Vite",
+        "React (SPA, arquitectura por componentes)",
+        "Vite (build rápido y moderno)",
         "CSS moderno / UI personalizada",
+        "Consumo de APIs REST",
       ],
     },
     {
       title: "Arquitectura de Software",
       items: [
-        "Arquitectura por capas",
-        "MVC y separación de responsabilidades",
-        "RESTful APIs",
-        "RBAC (Role-Based Access Control)",
-        "Autenticación JWT",
+        "Arquitectura por capas (API / Services / Domain / Persistence)",
+        "Separación de responsabilidades (SRP)",
+        "RESTful APIs bien definidas",
+        "Flujos de negocio basados en estados",
+        "Persistencia de eventos críticos (XML, CUFE, firma)",
+        "Diseño orientado a cumplimiento normativo",
+      ],
+    },
+    {
+      title: "Seguridad & Cumplimiento",
+      items: [
+        "Firma electrónica XAdES-BES",
+        "Gestión de certificados digitales (.p12)",
+        "Generación y persistencia de CUFE",
+        "Validación XSD (normativa DIAN)",
+        "QR oficial de validación",
+        "Preparación para entornos regulados",
       ],
     },
     {
       title: "DevOps & Entorno",
       items: [
-        "Docker",
+        "Docker (entornos reproducibles)",
         "CI/CD con GitHub Actions",
-        "Deploy en Vercel",
-        "Gestión de variables de entorno",
+        "Gestión segura de variables de entorno",
+        "Deploy frontend en Vercel",
+        "Preparación para despliegue backend productivo",
       ],
     },
   ];
@@ -44,7 +59,8 @@ export default function Architecture() {
     <section id="architecture" className="architecture-section">
       <h2 className="architecture-title">Frameworks & Arquitectura</h2>
       <p className="architecture-subtitle">
-        Frameworks modernos aplicados con criterio de ingeniería
+        Arquitecturas y frameworks aplicados en sistemas reales, con foco en
+        seguridad, cumplimiento normativo y escalabilidad.
       </p>
 
       <div className="architecture-grid">

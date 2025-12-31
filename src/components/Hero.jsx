@@ -9,9 +9,8 @@ export default function Hero() {
         </h2>
 
         <p style={styles.text}>
-          Especialista en desarrollo web, seguridad informática,
-          análisis de vulnerabilidades y automatización con Python.
-          Construyendo soluciones modernas, seguras y escalables.
+          Backend Engineer enfocado en sistemas seguros, automatización y arquitectura de software, 
+          con experiencia en facturación electrónica, APIs empresariales y seguridad aplicada.
         </p>
 
         <div style={styles.buttons}>

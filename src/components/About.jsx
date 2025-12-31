@@ -50,9 +50,10 @@ export default function About() {
             </p>
 
             <p style={styles.description}>
-              Profesional centrado en el desarrollo tecnológico y la seguridad
-              informática, con experiencia en análisis, despliegue y protección
-              de infraestructuras.
+              Ingeniero de sistemas con enfoque en backend y seguridad, especializado en diseñar 
+              y construir sistemas robustos, mantenibles y alineados a reglas de negocio reales. <br /> <br />
+              He trabajado en el desarrollo de APIs empresariales, flujos de facturación electrónica,
+               automatización y despliegue de servicios, priorizando consistencia de datos, control de estados y seguridad por diseño.
             </p>
 
             <p style={styles.description}>
@@ -60,7 +61,7 @@ export default function About() {
               backend, frontend o DevOps.
             </p>
 
-            <a href="/cv_anderson.pdf" download style={styles.cvButton}>
+            <a href="/cv_andersec.html" download style={styles.cvButton}>
               Descargar CV
             </a>
           </div>
