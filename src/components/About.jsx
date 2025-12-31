@@ -61,8 +61,13 @@ export default function About() {
               backend, frontend o DevOps.
             </p>
 
-            <a href="/cv_andersec.html" download style={styles.cvButton}>
-              Descargar CV
+           <a
+              href="/cv-andersec.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={styles.cvButton}
+            >
+              Ver CV
             </a>
           </div>
         </div>
