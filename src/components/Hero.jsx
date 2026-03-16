@@ -1,98 +1,70 @@
+import { Typewriter } from "react-simple-typewriter";
+import Terminal from "./Terminal";
+import "../styles/Hero.css";
+
 export default function Hero() {
   return (
-    <section id="hero" style={styles.hero}>
-      <div style={styles.container}>
-        <h1 style={styles.title}>Anderson Ortiz Muñoz</h1>
+    <section id="hero" className="hero">
 
-        <h2 style={styles.subtitle}>
-          Ingeniero de Sistemas | Ciberseguridad | Desarrollo de Software
+      <div className="hero-grid"></div>
+
+      <div className="hero-container">
+
+        <h1 className="hero-title glow-text">
+          Anderson Ortiz Muñoz
+        </h1>
+
+        <h2 className="hero-subtitle">
+          Ingeniero de Sistemas • Ciberseguridad • Pentesting • Desarrollo
         </h2>
 
-        <p style={styles.text}>
-          Backend Engineer enfocado en sistemas seguros, automatización y arquitectura de software, 
-          con experiencia en facturación electrónica, APIs empresariales y seguridad aplicada.
+        <p className="hero-terminal">
+          &gt;{" "}
+          <Typewriter
+            words={[
+              "scanning vulnerabilities...",
+              "analyzing network traffic...",
+              "securing infrastructures...",
+              "building secure APIs..."
+            ]}
+            loop
+            cursor
+            cursorStyle="_"
+            typeSpeed={60}
+            deleteSpeed={30}
+            delaySpeed={2000}
+          />
         </p>
 
-        <div style={styles.buttons}>
-          <a href="#projects" style={styles.btnPrimary}>
+        <p className="hero-description">
+          Backend Engineer enfocado en sistemas seguros, automatización
+          y arquitectura de software.
+        </p>
+
+        <div className="hero-buttons">
+
+          <a href="#projects" className="hero-btn-primary">
             Ver Proyectos
           </a>
 
-         <a
-          href="/cv-andersec.html"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={styles.btnPrimary}
-        >
-          Descargar CV
-        </a>
+          <a
+            href="/cv-andersec.html"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hero-btn-secondary"
+          >
+            Descargar CV
+          </a>
+
         </div>
+
+        {/* TERMINAL DENTRO DEL HERO */}
+        <div className="hero-terminal-wrapper">
+          <Terminal />
+        </div>
+
       </div>
+
     </section>
   );
 }
-
-const styles = {
-  hero: {
-    minHeight: "calc(100vh - 80px)",
-    display: "flex",
-    justifyContent: "center",
-    flexDirection: "column",
-    alignItems: "center",
-    textAlign: "center",
-  },
-
-  container: {
-    maxWidth: "900px",
-    margin: "0 auto",
-    padding: "20px",
-  },
-
-  title: {
-    fontSize: "48px",
-    fontWeight: "bold",
-    marginBottom: "10px",
-  },
-
-  subtitle: {
-    fontSize: "20px",
-    color: "#1E90FF",
-    marginBottom: "20px",
-  },
-
-  text: {
-    fontSize: "18px",
-    maxWidth: "700px",
-    margin: "0 auto",
-    opacity: 0.85,
-    lineHeight: 1.6,
-  },
-
-  buttons: {
-    marginTop: "40px",
-    display: "flex",
-    gap: "20px",
-    justifyContent: "center",
-    flexWrap: "wrap",
-  },
-
-  btnPrimary: {
-    padding: "12px 26px",
-    background: "#1E90FF",
-    color: "#fff",
-    borderRadius: "8px",
-    textDecoration: "none",
-    fontWeight: "600",
-    transition: "0.3s",
-  },
-
-  btnOutline: {
-    padding: "12px 26px",
-    border: "1px solid #1E90FF",
-    borderRadius: "8px",
-    textDecoration: "none",
-    color: "#fff",
-    fontWeight: "600",
-    transition: "0.3s",
-  },
-};

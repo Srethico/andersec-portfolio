@@ -1,6 +1,8 @@
 import { useEffect } from "react";
+import "../styles/Skills.css";
 
 export default function Skills() {
+
   const skillGroups = [
     {
       title: "Lenguajes",
@@ -53,209 +55,100 @@ export default function Skills() {
     },
   ];
 
-  // --- Scroll Reveal ---
+  /*
+  ============================================
+  Scroll reveal animation
+  ============================================
+  */
+
   useEffect(() => {
+
     const elements = document.querySelectorAll(".reveal");
 
     const observer = new IntersectionObserver(
       (entries) => {
+
         entries.forEach((entry) => {
-          if (entry.isIntersecting) entry.target.classList.add("visible");
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
         });
+
       },
       { threshold: 0.2 }
     );
 
     elements.forEach((el) => observer.observe(el));
+
   }, []);
 
   return (
-    <section id="Skills" style={styles.section}>
-      <div style={styles.container} className="reveal">
-        <h2 style={styles.title}>Skills</h2>
 
-        <div style={styles.groupsContainer}>
+    <section id="Skills" className="skills-section">
+
+      <div className="skills-container reveal">
+
+        <h2 className="skills-title">
+          Skills
+        </h2>
+
+        <div className="skills-grid">
+
           {skillGroups.map((group) => (
-            <div key={group.title} style={styles.group} className="skill-card reveal">
-              <h3 style={styles.groupTitle}>
-                <span style={styles.icon}>{group.icon}</span> {group.title}
+
+            <div key={group.title} className="skill-card reveal">
+
+              <h3 className="skill-group-title">
+                <span className="skill-icon">
+                  {group.icon}
+                </span>
+                {group.title}
               </h3>
 
-              <ul style={styles.skillList}>
-                {group.skills.map((skill) => (
-                  <li key={skill.name} style={styles.skillItem}>
-                    <div style={styles.skillHeader}>
-                      <span style={styles.skillName}>{skill.name}</span>
+              <ul className="skill-list">
 
-                      <span style={styles.stars}>
+                {group.skills.map((skill) => (
+
+                  <li key={skill.name} className="skill-item">
+
+                    <div className="skill-header">
+
+                      <span className="skill-name">
+                        {skill.name}
+                      </span>
+
+                      <span className="skill-stars">
                         {"★".repeat(Math.round(skill.level / 20))}
                         {"☆".repeat(5 - Math.round(skill.level / 20))}
                       </span>
+
                     </div>
 
-                    <div style={styles.barContainer}>
+                    <div className="skill-bar-container">
+
                       <div
-                        className="progress-bar"
-                        style={{ ...styles.barFill, width: `${skill.level}%` }}
+                        className="skill-progress-bar"
+                        style={{ width: `${skill.level}%` }}
                       ></div>
+
                     </div>
+
                   </li>
+
                 ))}
+
               </ul>
+
             </div>
+
           ))}
+
         </div>
+
       </div>
 
-      <style>{`
-        /* Scroll reveal */
-        .reveal {
-          opacity: 0;
-          transform: translateY(50px);
-          transition: all 0.8s ease;
-        }
-        .reveal.visible {
-          opacity: 1;
-          transform: translateY(0);
-        }
-
-        /* Tarjeta glass con hover neon */
-        .skill-card {
-          backdrop-filter: blur(12px);
-          transition: transform .35s ease, box-shadow .35s ease;
-        }
-        .skill-card:hover {
-          transform: translateY(-8px);
-          box-shadow: 0 0 25px rgba(30, 144, 255, 0.55),
-                      0 0 10px rgba(0, 255, 255, 0.3);
-        }
-
-        /* Barra animada */
-        .progress-bar {
-          height: 100%;
-          background: linear-gradient(90deg, #1E90FF, #00eaff);
-          border-radius: 50px;
-          transition: width 1.3s ease;
-          box-shadow: 0 0 15px rgba(0, 200, 255, .6);
-        }
-        
-                /* --- Efecto REFLECTION + Glow Futurista --- */
-        .skill-card {
-          position: relative;
-          overflow: visible;
-        }
-
-        /* Cubo principal */
-        .skill-card {
-          animation: floatSkill 4s ease-in-out infinite;
-        }
-
-        /* Reflejo */
-        .skill-card::after {
-          content: "";
-          position: absolute;
-          bottom: -40px;
-          left: 50%;
-          transform: translateX(-50%) scaleY(-1);
-          width: 85%;
-          height: 100px;
-          background: inherit;
-          opacity: 0.18;
-          filter: blur(12px);
-          border-radius: 18px;
-          pointer-events: none;
-        }
-
-        /* Glow neon en hover */
-        .skill-card:hover {
-          box-shadow: 
-              0 0 25px rgba(0, 200, 255, 0.5),
-              0 0 60px rgba(0, 150, 255, 0.3),
-              inset 0 0 15px rgba(0, 200, 255, 0.3);
-          transform: translateY(-10px) scale(1.02);
-        }
-
-        /* Flotación suave */
-        @keyframes floatSkill {
-          0%, 100% { transform: translateY(0); }
-          50% { transform: translateY(-6px); }
-        }
-
-      `}</style>
     </section>
+
   );
+
 }
-
-// --- ESTILOS ---
-const styles = {
-  section: {
-    padding: "100px 0",
-    backgroundColor: "#050505",
-  },
-  container: {
-    width: "90%",
-    maxWidth: "1200px",
-    margin: "auto",
-  },
-  title: {
-    fontSize: "34px",
-    color: "#1E90FF",
-    marginBottom: "50px",
-    textAlign: "center",
-    textShadow: "0 0 20px rgba(30,144,255,0.6)",
-  },
-  groupsContainer: {
-    display: "grid",
-    gap: "40px",
-    gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
-  },
-  group: {
-    background: "rgba(255,255,255,0.06)",
-    borderRadius: "16px",
-    padding: "25px",
-    border: "1px solid rgba(255,255,255,0.08)",
-  },
-  groupTitle: {
-    fontSize: "22px",
-    color: "#1E90FF",
-    marginBottom: "20px",
-    display: "flex",
-    alignItems: "center",
-    gap: "8px",
-    textShadow: "0 0 12px rgba(30,144,255,0.8)",
-  },
-  icon: {
-    fontSize: "26px",
-  },
-  skillList: { listStyle: "none", padding: 0, margin: 0 },
-  skillItem: { marginBottom: "25px" },
-  skillHeader: {
-    display: "flex",
-    justifyContent: "space-between",
-    marginBottom: "6px",
-  },
-  skillName: {
-    color: "#e0e0e0",
-    fontSize: "16px",
-    fontWeight: 500,
-  },
-  stars: {
-    color: "#FFD700",
-    fontSize: "14px",
-    letterSpacing: "2px",
-  },
-  barContainer: {
-    width: "100%",
-    background: "#0e0e0e",
-    height: "10px",
-    borderRadius: "40px",
-    overflow: "hidden",
-    border: "1px solid rgba(30,144,255,0.3)",
-  },
-  barFill: {
-    height: "100%",
-    borderRadius: "50px",
-  },
-};
-
-// --- FIN DE ARCHIVO ---

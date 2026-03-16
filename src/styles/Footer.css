@@ -1,0 +1,165 @@
+/* ==============================
+   FOOTER
+============================== */
+
+.footer {
+  background: #050505;
+  padding: 70px 20px 30px;
+  border-top: 1px solid rgba(30,144,255,.2);
+}
+
+/* Línea glow superior */
+.footer::before {
+  content: "";
+  display: block;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #1e90ff, transparent);
+  margin-bottom: 60px;
+}
+
+/* ==============================
+   CONTAINER
+============================== */
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;  /* marca más ancha */
+  gap: 60px;                             /* más separación entre columnas */
+  align-items: start;
+}
+
+/* ==============================
+   BRAND
+============================== */
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-brand h3 {
+  color: #fff;
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.footer-logo {
+  width: 48px;                           /* un poco más grande */
+  filter: drop-shadow(0 0 6px rgba(30,144,255,0.4));  /* glow sutil */
+}
+
+.footer-tagline {
+  font-size: .9rem;
+  color: #9ca3af;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Descripción extra bajo el tagline */
+.footer-brand-desc {
+  font-size: .85rem;
+  color: #64748b;
+  line-height: 1.6;
+  max-width: 280px;
+}
+
+/* ==============================
+   NAV
+============================== */
+
+.footer-nav h4,
+.footer-socials h4 {
+  color: #1e90ff;
+  margin-bottom: 18px;
+  font-size: .8rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;   /* headers más profesionales */
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 12px;         /* más espacio entre links */
+}
+
+.footer-links a {
+  color: #94a3b8;              /* un tono más sutil */
+  text-decoration: none;
+  font-size: .9rem;
+  transition: color .25s ease, padding-left .25s ease;
+  display: inline-block;
+}
+
+.footer-links a:hover {
+  color: #1e90ff;
+  padding-left: 6px;           /* efecto de deslizamiento al hover */
+}
+
+/* ==============================
+   SOCIAL
+============================== */
+
+.footer-icons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.footer-icons a {
+  font-size: 20px;
+  color: #94a3b8;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255,255,255,.08);  /* borde sutil */
+  border-radius: 8px;
+  transition: all .25s ease;
+}
+
+.footer-icons a:hover {
+  color: #1e90ff;
+  border-color: #1e90ff;
+  background: rgba(30,144,255,0.08);
+  transform: translateY(-3px);
+}
+
+/* ==============================
+   BOTTOM
+============================== */
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 60px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255,255,255,.06);
+}
+
+.footer-bottom p {
+  font-size: .82rem;
+  color: #475569;
+  letter-spacing: .03em;
+}
+
+/* ==============================
+   RESPONSIVE
+============================== */
+
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr;  /* una columna en móvil */
+    gap: 40px;
+  }
+
+  .footer-brand-desc {
+    max-width: 100%;
+  }
+}

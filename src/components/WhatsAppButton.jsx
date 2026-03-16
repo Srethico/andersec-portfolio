@@ -1,5 +1,5 @@
 export default function WhatsAppButton() {
-  const phone = "573132791203"; 
+  const phone = "573151895978"; // Reemplaza con tu número de teléfono en formato internacional (sin signos ni espacios)
   const message = encodeURIComponent(
     "Hola Anderson, revisé tu portafolio y me gustaría conversar contigo sobre una oportunidad profesional."
   );

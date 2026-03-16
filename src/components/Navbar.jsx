@@ -97,7 +97,7 @@ export default function Navbar() {
           </a>
 
           <a
-            href="https://www.linkedin.com/in/your-profile"
+            href="https://www.linkedin.com/in/anderson-ortiz-muñoz-25b4b63b3"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
@@ -107,7 +107,7 @@ export default function Navbar() {
           </a>
 
           <a
-            href="https://wa.me/573132791203?text=Hola%20Anderson%2C%20revis%C3%A9%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20conversar%20contigo%20sobre%20una%20oportunidad%20profesional."
+            href="https://wa.me/573151895978?text=Hola%20Anderson%2C%20revis%C3%A9%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20conversar%20contigo%20sobre%20una%20oportunidad%20profesional."
             target="_blank"
             rel="noopener noreferrer"
             aria-label="WhatsApp"
@@ -174,7 +174,7 @@ export default function Navbar() {
           </a>
 
           <a
-            href="https://www.linkedin.com/in/your-profile"
+            href="https://www.linkedin.com/in/anderson-ortiz-muñoz-25b4b63b3"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
@@ -184,7 +184,7 @@ export default function Navbar() {
           </a>
 
           <a
-            href="https://wa.me/573132791203?text=Hola%20Anderson%2C%20revis%C3%A9%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20conversar%20contigo%20sobre%20una%20oportunidad%20profesional."
+            href="https://wa.me/573151895978?text=Hola%20Anderson%2C%20revis%C3%A9%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20conversar%20contigo%20sobre%20una%20oportunidad%20profesional."
             target="_blank"
             rel="noopener noreferrer"
             aria-label="WhatsApp"

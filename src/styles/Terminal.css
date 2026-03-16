@@ -1,0 +1,126 @@
+/* src/styles/Terminal.css */
+
+.terminal-section {
+  padding: 0;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.terminal {
+
+  width: 420px;
+
+  max-width: 90%;
+
+  background: rgba(10,10,10,0.6);
+
+  backdrop-filter: blur(6px);
+
+  border-radius: 10px;
+
+  border: 1px solid rgba(30,144,255,0.25);
+
+  box-shadow:
+    0 0 25px rgba(30,144,255,0.2);
+
+  font-family: "Fira Code", monospace;
+
+}
+
+.terminal-header {
+
+  display: flex;
+
+  gap: 8px;
+
+  padding: 12px;
+
+  border-bottom: 1px solid #1e90ff22;
+
+}
+
+.dot {
+
+  width: 12px;
+  height: 12px;
+
+  border-radius: 50%;
+
+}
+
+.red { background: #ff5f56; }
+.yellow { background: #ffbd2e; }
+.green { background: #27c93f; }
+
+.terminal-body {
+
+  padding: 16px;
+
+  color: #00ff9c;
+
+  font-size: 13px;
+
+}
+
+.terminal-command {
+
+  color: #1e90ff;
+
+}
+
+.terminal-output {
+
+  margin-left: 10px;
+
+}
+
+form {
+
+  display: flex;
+
+  align-items: center;
+
+}
+
+.terminal-prompt {
+
+  margin-right: 6px;
+
+  color: #1e90ff;
+
+}
+
+input {
+
+  background: transparent;
+
+  border: none;
+
+  outline: none;
+
+  color: #00ff9c;
+
+  font-family: inherit;
+
+  width: 100%;
+
+}
+
+
+.terminal {
+
+  animation: terminalFloat 6s ease-in-out infinite;
+
+}
+
+@keyframes terminalFloat {
+
+  0% { transform: translateY(0); }
+
+  50% { transform: translateY(-8px); }
+
+  100% { transform: translateY(0); }
+
+}

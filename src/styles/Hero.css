@@ -1,0 +1,165 @@
+/* ======================================================
+   HERO SECTION
+====================================================== */
+
+.hero {
+  position: relative;
+  min-height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  padding: 80px 20px 40px;
+}
+
+/* ======================================================
+   CYBER GRID BACKGROUND
+====================================================== */
+
+.hero-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(30,144,255,0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(30,144,255,0.08) 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: gridMove 25s linear infinite;
+  z-index: 0;
+}
+
+@keyframes gridMove {
+  from { transform: translateY(0); }
+  to   { transform: translateY(50px); }
+}
+
+/* ======================================================
+   CONTAINER
+====================================================== */
+
+.hero-container {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+/* ======================================================
+   TERMINAL WRAPPER
+====================================================== */
+
+.hero-terminal-wrapper {
+  width: 100%;
+  max-width: 520px;
+}
+
+/* ======================================================
+   TITLE
+====================================================== */
+
+.hero-title {
+  font-size: 56px;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.glow-text {
+  animation: glowPulse 3s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+  0%   { text-shadow: 0 0 5px rgba(30,144,255,0.5), 0 0 15px rgba(30,144,255,0.3); }
+  50%  { text-shadow: 0 0 15px rgba(30,144,255,0.9), 0 0 35px rgba(30,144,255,0.5); }
+  100% { text-shadow: 0 0 5px rgba(30,144,255,0.5), 0 0 15px rgba(30,144,255,0.3); }
+}
+
+/* ======================================================
+   SUBTITLE
+====================================================== */
+
+.hero-subtitle {
+  font-size: 22px;
+  color: #1E90FF;
+  margin-bottom: 20px;
+}
+
+/* ======================================================
+   TERMINAL TYPEWRITER
+====================================================== */
+
+.hero-terminal {
+  font-family: "Courier New", monospace;
+  color: #00eaff;
+  margin-bottom: 25px;
+  font-size: 16px;
+}
+
+/* ======================================================
+   DESCRIPTION
+====================================================== */
+
+.hero-description {
+  font-size: 18px;
+  opacity: 0.85;
+  line-height: 1.6;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* ======================================================
+   BUTTONS
+====================================================== */
+
+.hero-buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.hero-btn-primary {
+  padding: 12px 26px;
+  background: #1E90FF;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all .25s ease;
+}
+
+.hero-btn-primary:hover {
+  transform: translateY(-2px);
+  background: #1877d4;
+}
+
+.hero-btn-secondary {
+  padding: 12px 26px;
+  border: 1px solid #1E90FF;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #1E90FF;
+  font-weight: 600;
+  transition: all .25s ease;
+}
+
+.hero-btn-secondary:hover {
+  transform: translateY(-2px);
+  background: rgba(30,144,255,0.1);
+}
+
+/* ======================================================
+   RESPONSIVE
+====================================================== */
+
+@media (max-width: 768px) {
+  .hero-title       { font-size: 38px; }
+  .hero-subtitle    { font-size: 18px; }
+  .hero-description { font-size: 16px; }
+  .hero-terminal-wrapper { max-width: 100%; }
+}

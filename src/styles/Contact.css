@@ -1,13 +1,170 @@
+/* ==========================================================================
+   CONTACT.CSS
+   Sección de contacto
+   - Formulario estable
+   - Estados visuales claros
+   - Responsive
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   SECCIÓN
+   -------------------------------------------------------------------------- */
+
+.contact-wrapper {
+  padding: 100px 20px;
+  background: #0a0a0a;
+  display: flex;
+  justify-content: center;
+}
+
+/* --------------------------------------------------------------------------
+   CARD
+   -------------------------------------------------------------------------- */
+
+.contact-card {
+  width: 100%;
+  max-width: 460px;
+  padding: 32px;
+
+  background: #121212;
+  border-radius: 14px;
+  border: 1px solid #1e1e1e;
+
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* Variante visual (mantiene tu clase futurist sin romper nada) */
+.contact-card.futurist {
+  border-color: rgba(30, 144, 255, 0.35);
+  box-shadow:
+    0 0 12px rgba(30, 144, 255, 0.25),
+    inset 0 0 8px rgba(30, 144, 255, 0.15);
+}
+
+.contact-card:hover {
+  transform: translateY(-6px);
+}
+
+/* --------------------------------------------------------------------------
+   TÍTULOS
+   -------------------------------------------------------------------------- */
+
+.contact-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.contact-description {
+  font-size: 15px;
+  color: #a0a0a0;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* --------------------------------------------------------------------------
+   FORMULARIO
+   -------------------------------------------------------------------------- */
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Inputs base */
+.contact-input,
+.contact-textarea {
+  width: 100%;
+  padding: 14px;
+
+  background: #0e0e0e;
+  border: 1px solid #222;
+  border-radius: 8px;
+
+  font-size: 15px;
+  color: #ffffff;
+
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.contact-textarea {
+  min-height: 120px;
+  resize: none;
+}
+
+/* Focus */
+.contact-input:focus,
+.contact-textarea:focus {
+  outline: none;
+  border-color: #1e90ff;
+  box-shadow: 0 0 0 1px rgba(30, 144, 255, 0.35);
+}
+
+/* --------------------------------------------------------------------------
+   BOTÓN
+   -------------------------------------------------------------------------- */
+
+.contact-btn {
+  margin-top: 10px;
+  padding: 14px;
+
+  background: #1e90ff;
+  border: none;
+  border-radius: 8px;
+
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+
+  cursor: pointer;
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.contact-btn:hover {
+  background: #3aa0ff;
+  transform: translateY(-2px);
+}
+
+.contact-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* --------------------------------------------------------------------------
+   MENSAJES DE ESTADO
+   -------------------------------------------------------------------------- */
+
 .contact-success {
   margin-top: 12px;
-  color: #00ffcc;
-  font-weight: 500;
+  font-size: 14px;
+  color: #4ade80; /* verde */
   text-align: center;
 }
 
 .contact-error {
   margin-top: 12px;
-  color: #ff4d4d;
-  font-weight: 500;
+  font-size: 14px;
+  color: #f87171; /* rojo */
   text-align: center;
+}
+
+/* --------------------------------------------------------------------------
+   RESPONSIVE
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 480px) {
+  .contact-card {
+    padding: 24px;
+  }
+
+  .contact-title {
+    font-size: 24px;
+  }
+
+  .contact-description {
+    font-size: 14px;
+  }
 }
